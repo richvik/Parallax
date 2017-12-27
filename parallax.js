@@ -1,4 +1,4 @@
-(function(){
+(function (window, document) {
     window.Parallax = function (items, optionsSet) {
         this.windowWidth = window.innerWidth;
         this.windowHeight = window.innerHeight;
@@ -14,7 +14,7 @@
         };
         this.changeOptions(optionsSet);
     };
-    Parallax.prototype = {
+    window.Parallax.prototype = {
         init: function () {
             this.createOptions();
             this.mouseMoveEvent(this.getTypeSelector());
@@ -86,13 +86,12 @@
             console.error('This message error --------->> ' + error);
         }
     };
-})();
-window.onload = function() {
-    var parallax = new Parallax('.js-parallax', {
-        options: {
-            typeParallax: 'parallaxMove',
-            wrapperParentParallax: '.main-page'
-        }
-    });
-    parallax.init();
-};
+})(window, window.document);
+
+var parallax = new Parallax('.js-parallax', {
+    options: {
+        typeParallax: 'parallaxMove',
+        wrapperParentParallax: '.main-page'
+    }
+});
+parallax.init();
