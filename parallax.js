@@ -14,7 +14,7 @@
         };
         this.changeOptions(optionsSet);
     };
-    window.Parallax.prototype = {
+    Parallax.prototype = {
         init: function () {
             this.createOptions();
             this.mouseMoveEvent(this.getTypeSelector());
