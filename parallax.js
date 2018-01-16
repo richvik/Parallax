@@ -1,3 +1,6 @@
+    // Created by Novytskyi Viktor
+
+
 (function (window, document) {
     window.Parallax = function (items, optionsSet) {
         this.windowWidth = window.innerWidth;
